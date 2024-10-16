@@ -54,7 +54,7 @@ Traditional access control systems in smart homes often lack efficiency, securit
 Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on our code of conduct and the process for submitting pull requests.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
 
 ## Acknowledgments
 - Special thanks to the researchers and developers whose work inspired this project.
