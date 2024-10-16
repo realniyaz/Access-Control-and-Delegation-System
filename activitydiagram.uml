@@ -1,0 +1,26 @@
+@startuml
+start
+
+:User requests access to Smart Device;
+if (Is User authenticated?) then (yes)
+  :Check Permission;
+  if (Permission granted?) then (yes)
+    :Allow access to Smart Device;
+    :Log the access event;
+  else (no)
+    :Deny access;
+  endif
+else (no)
+  :Deny access;
+endif
+
+:User requests Delegation;
+if (Is User authorized for delegation?) then (yes)
+  :Allow delegation of permissions;
+  :Log delegation event;
+else (no)
+  :Deny delegation;
+endif
+
+stop
+@enduml
