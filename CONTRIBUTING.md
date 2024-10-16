@@ -8,4 +8,4 @@ We welcome contributions to enhance the Smart Home Access Control and Delegation
 
 2. **Clone Your Fork**: Use the following command to clone your forked repository to your local machine:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/SmartHomeAccessControl.git
+   git clone https://github.com/YOUR_USERNAME/Project-ACDWSHAT.git
