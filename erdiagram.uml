@@ -1,0 +1,25 @@
+@startuml
+actor User
+participant "Smart Home App" as App
+participant "Access Control System" as ACS
+participant "Smart Device" as Device
+participant "Access Log System" as Log
+participant "Delegation System" as Delegation
+
+User -> App : Request access to Smart Device
+App -> ACS : Authenticate User
+ACS -> App : Authentication Response
+App -> ACS : Check User Permission
+ACS -> App : Permission Granted?
+App -> Device : Grant or Deny Access
+
+App -> Log : Log Access Event
+
+User -> App : Request Permission Delegation
+App -> ACS : Check Delegation Authorization
+ACS -> Delegation : Delegate Permission
+Delegation -> ACS : Confirm Delegation
+ACS -> App : Delegation Approved or Denied
+App -> Log : Log Delegation Event
+
+@enduml
