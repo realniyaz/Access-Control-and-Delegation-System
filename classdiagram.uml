@@ -1,0 +1,43 @@
+@startuml
+
+entity "User" {
+  +UserID : String
+  Name : String
+  Email : String
+  Phone : String
+}
+
+entity "Smart Device" {
+  +DeviceID : String
+  DeviceName : String
+  DeviceType : String
+  Location : String
+}
+
+entity "Access Log" {
+  +LogID : String
+  AccessTime : DateTime
+  Action : String
+}
+
+entity "Permission" {
+  +PermissionID : String
+  PermissionType : String
+}
+
+entity "Delegation" {
+  +DelegationID : String
+  StartTime : DateTime
+  EndTime : DateTime
+  DelegationDuration : String
+}
+
+User --> "controls" Smart_Device
+User --> "logs" Access_Log
+Access_Log --> "related to" Smart_Device
+User --> "has" Permission
+Permission --> "applies to" Smart_Device
+User --> "delegates" Delegation
+Delegation --> "grants" Permission
+
+@enduml
