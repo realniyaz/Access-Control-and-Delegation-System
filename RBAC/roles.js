@@ -1,11 +1,7 @@
-const roleMiddleware = (roles) => (req, res, next) => {
-  if (!roles.includes(req.user.role)) {
-    return res.status(403).send('Access denied');
-  }
-  next();
+const roles = {
+  Admin: "Admin",
+  User: "User",
+  Guest: "Guest",
 };
 
-// Usage:
-app.get('/admin', authMiddleware, roleMiddleware(['admin']), (req, res) => {
-  res.send('Welcome, admin!');
-});
+module.exports = roles;
