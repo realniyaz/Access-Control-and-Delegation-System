@@ -12,8 +12,8 @@ This endpoint allows a new user to register in the system by providing necessary
 The request payload should be in JSON format:
 ```json
 {
-  "username": "john_doe",
-  "email": "john.doe@example.com",
+  "username": "riley",
+  "email": "riley@example.com",
   "password": "StrongPassword123!",
   "role": "admin"
 }
